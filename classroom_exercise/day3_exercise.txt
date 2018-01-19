@@ -1,0 +1,143 @@
+#day3 exercise
+
+'''
+a)Given the following dictionary:
+
+      inventory = {
+
+                   'gold' : 500,
+
+                   'pouch' : ['flint', 'twine', 'gemstone'],
+
+                   'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']
+
+                }
+
+       Try to do the followings:
+
+       i)Add a key to inventory called 'pocket'.
+
+       ii)Set the value of 'pocket' to be a list consisting of the strings 'seashell', 'strange berry', and 'lint'.
+
+       iii).sort()the items in the list stored under the 'backpack' key.
+
+       iv)Then .remove('dagger') from the list of items stored under the 'backpack' key.
+
+       v)Add 50 to the number stored under the 'gold' key.
+'''
+
+inventory = {
+
+ 
+                  'gold' : 500,
+
+ 
+                  'pouch' : ['flint', 'twine', 'gemstone'],
+
+  
+                  'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']
+
+
+                }
+
+
+inventory['pocket']=['seashell','strange berry','lint']
+
+#print (inventory)
+
+inventory['backpack'].sort()
+
+#print inventory
+
+inventory['backpack'].remove('dagger')
+
+#print inventory
+
+inventory['gold']=inventory['gold']+50
+
+#print inventory['gold']
+
+print inventory
+
+'''
+o/p:
+{'pocket': ['seashell', 'strange berry', 'lint'], 'backpack': ['bedroll', 'bread loaf', 'xylophone'], 'pouch': ['flint', 'twine', 'gemstone'], 'gold': 550}
+'''
+ 
+
+
+'''
+b) create a student details dictionary having {'student1':[marks1,marks2, marks3],'student2':[marks1,marks2,marks3]}
+
+       i)Create the dictionary as mentioned above
+
+       ii) need to perform total and average of the marks for each student
+'''
+
+stud_dict={'stud1':[99,98,67],'stud2':[76,34,67]}
+
+print(stud_dict)
+
+
+print ("total marks of student 1:")
+
+a=sum(stud_dict['stud1'])
+
+print a
+
+
+print ("average marks of student 1:")
+
+print a/3
+
+
+print ("total marks of student 2:")
+
+b=sum(stud_dict['stud2'])
+
+print b
+
+
+print ("average marks of student 1:")
+
+print b/3
+
+
+'''
+o/p:
+{'stud2': [76, 34, 67], 'stud1': [99, 98, 67]}
+total marks of student 1:
+264
+average marks of student 1:
+88
+total marks of student 2:
+177
+average marks of student 1:
+59
+'''
+
+
+'''
+c)  write the below contents to  a file named 'marks.txt' using python script
+
+science = 50
+maths = 90
+english = 85
+tamil = 92
+
+       i) read the file and calculate the total sum of marks available there
+'''
+
+file=open('marks.txt','w') 
+file.write('science=50\n maths=90\n english=85 \n tamil=92')
+file.close()
+tem=0
+file=open('marks.txt','r')
+lis=file.readlines() 
+for i in lis: 
+l=i.split('=') 
+print l 
+no=l[1].strip().strip('\n') 
+tem=tem+int(no) 
+print tem
+file.close() 

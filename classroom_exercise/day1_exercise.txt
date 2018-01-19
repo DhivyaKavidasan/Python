@@ -1,0 +1,114 @@
+1.get the first name and last name from the user and print the full name
+
+firstname=raw_input('enter the first name')
+
+lastname=raw_input('enter the last name')
+
+print ( 'name is '+firstname+' '+lastname)
+
+o/p
+
+enter the first name dhivya
+enter the last name kavidasan
+name is dhivya kavidasan
+
+2.declare integer variable and try all the integer functions
+
+a=10
+
+
+print(dir(a))
+
+print a.bit_length()
+
+
+o/p
+4
+
+3.declare string variable and try all the string functions
+
+b='dhivyaKAVIDASAN'
+
+print b.capitalize()
+
+b='dhivya'
+
+print b.upper()
+
+b='DHIVYA'
+
+print b.lower()
+
+b='dhiVYA'
+print 
+b.swapcase()
+
+b='DHIvya'
+print 
+b.index('I')
+
+a=' dhivya'
+
+print a.count('e')
+
+a=' dhivya kavidasan'
+
+print a.title()
+
+b='DhivYa   '
+
+print b.rstrip()
+
+b='  DhivyA   '
+
+print b.lstrip()
+
+a=' dhivya/kavi'
+
+print a.split('/')
+
+a='pooja/ram' 
+
+print a.startswith('p')
+
+b='  dhivya   '
+
+print b.isupper()
+
+a='dhivya'
+
+print a.islower()
+
+a='1'
+
+print a.isdigit()
+
+b='  dhivya   '
+
+print len(b)
+
+4.get your full name,age from the user and print the firstname,lastname using sclicing
+i.2 raw_input name and age
+ii.print first name last name and age
+iii.when age>=18 ,eligible to vote
+iv.when age<18 not eligible to vote.
+
+fullname=raw_input('enter your full name with space b/w first and last name')
+
+age=raw_input('enter your age')
+
+iage=int(age)
+
+name=fullname.split()
+
+print ('first name is '+name[0])
+
+print ('last name is '+name[1])
+
+if iage>=18:
+  
+	print 'eligible to vote'
+
+else:
+  
+	print 'not eligible to vote'
